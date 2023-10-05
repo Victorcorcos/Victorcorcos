@@ -1,6 +1,6 @@
 # Welcome 👋
 
-![Victor's GitHub stats](https://github-readme-stats2-neon.vercel.app/api?username=Victorcorcos&show=prs_merged,prs_merged_percentag&show_icons=true&include_all_commits=true)
+![Victor's GitHub stats](https://github-readme-stats2-neon.vercel.app/api?username=Victorcorcos&show_icons=true&include_all_commits=true)
 
 ![Top Langs](https://github-readme-stats2-neon.vercel.app/api/top-langs/?username=Victorcorcos&hide_progress=true)
 
