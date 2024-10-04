@@ -16,4 +16,4 @@ My passion for technology and innovation has been nurtured through a Computer Sc
 >
 > — 𝘙𝘰𝘣𝘦𝘳𝘵 𝘊. 𝘔𝘢𝘳𝘵𝘪𝘯
 
-Let's connect and discuss how we can make a difference in the world of technology together 🤝
+Let's transform the world via code  🤝
