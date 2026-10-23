@@ -2,16 +2,6 @@
   <img src="https://victorcorcos.pages.dev/images/github/profile-card.gif" width="100%" alt="Victor Costa, Senior Full Stack Developer &amp; Tech Lead. Ruby on Rails, React, TypeScript, APIs and integrations. Animated VC logo with a neural network backdrop.">
 </a>
 
-<p align="center">
-  🌐 <a href="https://victorcorcos.pages.dev/"><b>victorcorcos.pages.dev</b></a>
-  &nbsp;·&nbsp;
-  ✉️ <a href="mailto:victorcorcos.labs@gmail.com">victorcorcos.labs@gmail.com</a>
-  &nbsp;·&nbsp;
-  💬 <a href="https://wa.me/5571997053401">+55 71 99705-3401</a>
-  &nbsp;·&nbsp;
-  💼 <a href="https://www.linkedin.com/in/victorcorcos">LinkedIn</a>
-</p>
-
 # Welcome 👋
 
 ![Victor's GitHub stats](https://github-readme-stats2-neon.vercel.app/api?username=Victorcorcos&show_icons=true&include_all_commits=true)
