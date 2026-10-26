@@ -4,14 +4,9 @@
 
 # Victor Costa
 
-**Senior Full Stack Developer · Tech Lead · Ruby on Rails · React · TypeScript · Python**
+**Senior Full Stack Developer & Tech Lead · Ruby on Rails · React · TypeScript**
 
 I build web applications from data models and APIs to user interfaces and production diagnostics. Developing software professionally since 2017, I combine hands-on implementation with architectural decisions, code review and responsibility for delivery.
-
-<p>
-  <img src="./assets/github-stats-9a125d08f42579b4.svg" width="467" alt="Victor's GitHub stats">
-  <img src="./assets/top-languages-6c899e9c883291e6.svg" width="300" alt="Most used languages">
-</p>
 
 **[Explore my work](https://victorcorcos.pages.dev/en/work/)** · [Services](https://victorcorcos.pages.dev/en/services/) · [Email](mailto:victorcorcos.labs@gmail.com) · [LinkedIn](https://www.linkedin.com/in/victorcorcos) · [WhatsApp](https://wa.me/5571997053401)
 
@@ -21,6 +16,7 @@ I build web applications from data models and APIs to user interfaces and produc
 - **Full stack leadership:** I served as the main technical lead while contributing directly to backend, frontend and automated tests, overseeing technical decisions, quality and deadlines.
 - **Integration and diagnostics:** I took full technical responsibility for an API integration backend and built its diagnostic interface, from understanding contracts to implementation and verification.
 - **Engineering knowledge:** I created three published Ruby gems and delivered talks on Clean Code and BDD at UFBA. I work directly with international teams and clients in English.
+- **AI-assisted engineering:** I built a [personal development harness](https://victorcorcos.pages.dev/en/work/ai-harness/) combining repository context, reusable skills and verification workflows, with human review of generated changes.
 
 ## Explore my engineering work
 
@@ -38,11 +34,16 @@ I build web applications from data models and APIs to user interfaces and produc
 
 **Core:** Ruby on Rails, React, TypeScript, REST, GraphQL, automated testing and BDD.
 
-**Also worked with:** SQL and NoSQL databases, Redis, Kafka, AWS ECS/S3/SQS/SNS, Docker, observability, C/C++ and Rust.
+**Also worked with:** JavaScript, Python, SQL and NoSQL databases, Redis, Kafka, AWS ECS/S3/SQS/SNS, Docker, observability, C/C++ and Rust.
 
 Computer Science graduate from **UFBA**, with an exchange year at **SUNY Plattsburgh, USA**.
 
-For Senior Full Stack Development, hands-on technical leadership, consulting or developer training, **[let’s talk](mailto:victorcorcos.labs@gmail.com)**.
+For senior full stack development, hands-on technical leadership, consulting or developer training, **[let’s talk](mailto:victorcorcos.labs@gmail.com)**.
+
+<p>
+  <img src="./assets/github-stats-9a125d08f42579b4.svg" width="467" alt="Victor's GitHub stats">
+  <img src="./assets/top-languages-6c899e9c883291e6.svg" width="300" alt="Most used languages">
+</p>
 
 <details>
 <summary>Leia em português</summary>
@@ -61,6 +62,7 @@ Desenvolvo aplicações web, da modelagem de dados e APIs às interfaces e ao di
 - **Liderança full stack:** fui o principal líder técnico e participei diretamente do backend, frontend e testes automatizados, acompanhando decisões técnicas, qualidade e prazos.
 - **Integração e diagnóstico:** assumi toda a responsabilidade técnica pelo backend de uma integração de APIs e criei sua interface de diagnóstico, do estudo dos contratos à implementação e verificação.
 - **Conhecimento de engenharia:** criei três gems Ruby publicadas e apresentei palestras sobre Clean Code e BDD na UFBA. Trabalho diretamente com equipes e clientes internacionais em inglês.
+- **Engenharia assistida por IA:** criei um [harness pessoal de desenvolvimento](https://victorcorcos.pages.dev/pt/projetos/harness-ia/) que combina contexto do repositório, skills reutilizáveis e fluxos de verificação, com revisão humana das alterações geradas.
 
 ### Conheça meu trabalho de engenharia
 
@@ -78,10 +80,10 @@ Desenvolvo aplicações web, da modelagem de dados e APIs às interfaces e ao di
 
 **Foco principal:** Ruby on Rails, React, TypeScript, REST, GraphQL, testes automatizados e BDD.
 
-**Também trabalhei com:** bancos SQL e NoSQL, Redis, Kafka, AWS ECS/S3/SQS/SNS, Docker, observabilidade, C/C++ e Rust.
+**Também trabalhei com:** JavaScript, Python, bancos SQL e NoSQL, Redis, Kafka, AWS ECS/S3/SQS/SNS, Docker, observabilidade, C/C++ e Rust.
 
 Bacharel em Ciência da Computação pela **UFBA**, com intercâmbio na **SUNY Plattsburgh, EUA**.
 
-Para Desenvolvimento Full Stack Sênior, liderança técnica com atuação no código, consultoria ou capacitação de desenvolvedores, **[vamos conversar](mailto:victorcorcos.labs@gmail.com)**.
+Para desenvolvimento full stack sênior, liderança técnica com atuação no código, consultoria ou capacitação de desenvolvedores, **[vamos conversar](mailto:victorcorcos.labs@gmail.com)**.
 
 </details>
