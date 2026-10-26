@@ -1,6 +1,8 @@
 """Refresh profile cards without replacing working images with error responses."""
 
 from pathlib import Path
+import hashlib
+import re
 import time
 from urllib.error import URLError
 from urllib.request import Request, urlopen
@@ -66,6 +68,9 @@ def main():
     ET.register_namespace("", "http://www.w3.org/2000/svg")
     assets = ROOT / "assets"
     assets.mkdir(exist_ok=True)
+    readme_path = ROOT / "README.md"
+    readme = readme_path.read_text()
+    snapshots = []
     for filename, data in cards:
         root = ET.fromstring(data)
         root.set("height", f"{height:g}")
@@ -73,11 +78,23 @@ def main():
         data = b"\n".join(
             line.rstrip() for line in ET.tostring(root, encoding="utf-8").splitlines()
         ) + b"\n"
-        target = assets / filename
+        # A new URL for new content avoids stale browser/CDN copies of old cards.
+        stem = Path(filename).stem
+        digest = hashlib.sha256(data).hexdigest()[:16]
+        target = assets / f"{stem}-{digest}.svg"
+        pattern = rf'(?<=src=")\./assets/{re.escape(stem)}(?:-[0-9a-f]{{16}})?\.svg(?=")'
+        readme, replacements = re.subn(pattern, f"./assets/{target.name}", readme)
+        if replacements != 1:
+            raise ValueError(f"Expected one README image for {filename}")
+        snapshots.append((filename, target, data))
+
+    for filename, target, data in snapshots:
         temporary = target.with_suffix(".svg.tmp")
         temporary.write_bytes(data)
         temporary.replace(target)
         print(f"Updated {target.relative_to(ROOT)}")
+    readme_path.write_text(readme)
+    # Retain old URLs so cached README pages can still load their exact images.
 
 
 if __name__ == "__main__":

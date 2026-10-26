@@ -5,8 +5,8 @@
 # Welcome 👋
 
 <p>
-  <img src="./assets/github-stats.svg" width="467" alt="Victor's GitHub stats">
-  <img src="./assets/top-languages.svg" width="300" alt="Most used languages">
+  <img src="./assets/github-stats-fcbd7a2ef49b3923.svg" width="467" alt="Victor's GitHub stats">
+  <img src="./assets/top-languages-6c899e9c883291e6.svg" width="300" alt="Most used languages">
 </p>
 
 𝐇𝐢 𝐭𝐡𝐞𝐫𝐞!

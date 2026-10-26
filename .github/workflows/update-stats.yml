@@ -32,7 +32,7 @@ jobs:
         run: python3 -B scripts/update_stats.py
       - name: Commit refreshed cards
         run: |
-          git add assets/github-stats.svg assets/top-languages.svg
+          git add -A -- README.md assets/
           if git diff --cached --quiet; then
             exit 0
           fi

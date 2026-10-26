@@ -1,4 +1,6 @@
 from pathlib import Path
+import hashlib
+import re
 import tempfile
 import unittest
 from unittest.mock import MagicMock, patch
@@ -8,10 +10,56 @@ import xml.etree.ElementTree as ET
 from scripts import update_stats
 
 
+def snapshot(filename):
+    readme = (update_stats.ROOT / "README.md").read_text()
+    paths = re.findall(
+        rf'src="(\./assets/{re.escape(Path(filename).stem)}(?:-[0-9a-f]{{16}})?\.svg)"',
+        readme,
+    )
+    if len(paths) != 1:
+        raise AssertionError(f"Expected one snapshot for {filename}: {paths}")
+    return update_stats.ROOT / paths[0]
+
+
 class UpdateStatsTests(unittest.TestCase):
+    def test_readme_urls_identify_the_exact_snapshot_contents(self):
+        readme = (update_stats.ROOT / "README.md").read_text()
+        for filename, *_ in update_stats.CARDS:
+            path = snapshot(filename)
+            digest = hashlib.sha256(path.read_bytes()).hexdigest()[:16]
+            self.assertEqual(path.name, f"{Path(filename).stem}-{digest}.svg")
+            self.assertIn(f'src="./assets/{path.name}"', readme)
+
+    def test_refresh_changes_url_only_when_image_changes(self):
+        data = [snapshot(filename).read_bytes() for filename, *_ in update_stats.CARDS]
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            readme = root / "README.md"
+            readme.write_text('\n'.join(
+                f'<img src="./assets/{filename}">' for filename, *_ in update_stats.CARDS
+            ))
+            with patch.object(update_stats, "ROOT", root):
+                with patch.object(update_stats, "fetch_card", side_effect=data):
+                    update_stats.main()
+                first = readme.read_text()
+                with patch.object(update_stats, "fetch_card", side_effect=data):
+                    update_stats.main()
+                self.assertEqual(readme.read_text(), first)
+                # Change valid SVG metadata without depending on text indentation.
+                changed = data[1].replace(b'role="img"', b'role="img" aria-label="updated"')
+                with patch.object(update_stats, "fetch_card", side_effect=[data[0], changed]):
+                    update_stats.main()
+                old_urls = re.findall(r'src="([^"]+)"', first)
+                new_urls = re.findall(r'src="([^"]+)"', readme.read_text())
+                self.assertEqual(old_urls[0], new_urls[0])
+                self.assertNotEqual(old_urls[1], new_urls[1])
+                self.assertTrue((root / old_urls[1]).is_file())
+                for url in new_urls:
+                    self.assertTrue((root / url).is_file())
+
     def test_card_canvases_have_equal_heights_and_fit_a_desktop_row(self):
         roots = [
-            ET.parse(update_stats.ROOT / "assets" / filename).getroot()
+            ET.parse(snapshot(filename)).getroot()
             for filename, *_ in update_stats.CARDS
         ]
         self.assertEqual(roots[0].get("height"), roots[1].get("height"))
@@ -22,7 +70,7 @@ class UpdateStatsTests(unittest.TestCase):
     def test_committed_cards_are_valid(self):
         for filename, _, heading, content_class in update_stats.CARDS:
             with self.subTest(filename=filename):
-                data = (update_stats.ROOT / "assets" / filename).read_bytes()
+                data = snapshot(filename).read_bytes()
                 update_stats.validate_svg(data, heading, content_class)
 
     def test_rejects_html_svg_error_cards_and_empty_cards(self):
@@ -39,7 +87,7 @@ class UpdateStatsTests(unittest.TestCase):
     @patch.object(update_stats, "urlopen")
     def test_retries_transient_failure(self, urlopen, sleep):
         filename, url, heading, content_class = update_stats.CARDS[0]
-        data = (update_stats.ROOT / "assets" / filename).read_bytes()
+        data = snapshot(filename).read_bytes()
         response = MagicMock()
         response.__enter__.return_value = response
         response.headers.get_content_type.return_value = "image/svg+xml"
