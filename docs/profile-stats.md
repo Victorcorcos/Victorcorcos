@@ -7,6 +7,13 @@ wrap naturally on mobile. The refresh gives both SVG canvases the same height,
 preserving their original widths and text sizes rather than stretching the
 language card. Their combined width is 767 pixels plus the space between them.
 
+The language request uses the service's supported `langs_count=12` option with
+`hide_progress=true`, which renders up to 12 languages in two columns. The
+service obtains the language data from GitHub and ranks it by byte count by
+default; no language names, rankings or values are added locally. If the service
+finds fewer than 12 languages, the card shows only those available. See the
+[upstream language-count documentation](https://github.com/anuraghazra/github-readme-stats#show-more-languages).
+
 Previously, both images used live Vercel endpoints through GitHub's Camo proxy.
 During investigation, uncached responses took 4.2–6.3 seconds compared with
 0.3–0.5 seconds for cached responses. Both returned valid SVGs with HTTP 200;

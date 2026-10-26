@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="467" height="195" viewBox="0 0 467 195" fill="none" role="img" aria-labelledby="descId">
+<svg xmlns="http://www.w3.org/2000/svg" width="467" height="215" viewBox="0 0 467 215" fill="none" role="img" aria-labelledby="descId">
         <title id="titleId">Victor Cordeiro Costa's GitHub Stats, Rank: A+</title>
         <desc id="descId">Total Stars Earned: 154, Total Commits  : 154, Total PRs: 2316, Total Issues: 68, Contributed to (last year): 29</desc>
         <style>
@@ -64,7 +64,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 28.222938831811348;
+        stroke-dashoffset: 28.222551351374193;
       }
     }
 

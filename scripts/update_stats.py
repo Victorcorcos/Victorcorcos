@@ -18,7 +18,7 @@ CARDS = (
     ),
     (
         "top-languages.svg",
-        f"{BASE_URL}/top-langs/?username=Victorcorcos&hide_progress=true",
+        f"{BASE_URL}/top-langs/?username=Victorcorcos&hide_progress=true&langs_count=12",
         "Most Used Languages",
         "lang-name",
     ),
