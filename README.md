@@ -4,9 +4,10 @@
 
 # Welcome 👋
 
-![Victor's GitHub stats](https://github-readme-stats2-neon.vercel.app/api?username=Victorcorcos&show_icons=true&include_all_commits=true)
-
-![Top Langs](https://github-readme-stats2-neon.vercel.app/api/top-langs/?username=Victorcorcos&hide_progress=true)
+<p>
+  <img src="./assets/github-stats.svg" width="467" alt="Victor's GitHub stats">
+  <img src="./assets/top-languages.svg" width="300" alt="Most used languages">
+</p>
 
 𝐇𝐢 𝐭𝐡𝐞𝐫𝐞!
 
