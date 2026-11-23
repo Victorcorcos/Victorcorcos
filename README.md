@@ -41,7 +41,7 @@ Computer Science graduate from **UFBA**, with an exchange year at **SUNY Plattsb
 For senior full stack development, hands-on technical leadership, consulting or developer training, **[let’s talk](mailto:victorcorcos.labs@gmail.com)**.
 
 <p>
-  <img src="./assets/github-stats-f44111daa9271bfe.svg" width="467" alt="Victor's GitHub stats">
+  <img src="./assets/github-stats-c8bab7ff1ec46755.svg" width="467" alt="Victor's GitHub stats">
   <img src="./assets/top-languages-9f9ea3fe5076e9c3.svg" width="300" alt="Most used languages">
 </p>
 
